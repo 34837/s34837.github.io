@@ -5,69 +5,211 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Activities | Portfolio</title>
+<title>Statement of Purpose | Titaya Kaidklaeng</title>
 
 <style>
 
-body {
-    font-family: Tahoma, sans-serif;
-    background: linear-gradient(135deg, #E6F7FF, #F7FCFF);
-    text-align: center;
-    padding: 50px 20px;
-    color: #344B56;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: "Tahoma", sans-serif;
+    background: linear-gradient(135deg, #E6F7FF, #F7FCFF);
+    color: #344B56;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+
+/* กล่องหลัก */
 
 .container {
-    max-width: 900px;
+    max-width: 1050px;
     margin: auto;
+
     background: white;
-    padding: 45px;
-    border-radius: 30px;
+
+    border-radius: 35px;
+
+    padding: 40px 55px;
+
     border: 2px solid #C7E8F5;
-    box-shadow: 0 15px 40px rgba(74,155,197,0.15);
+
+    box-shadow: 0 20px 50px rgba(74,155,197,0.15);
+
+    position: relative;
+    overflow: hidden;
 }
 
-h1 {
+
+/* วงกลมตกแต่ง */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #EAF9FF;
+    z-index: 0;
+}
+
+.circle1 {
+    width: 250px;
+    height: 250px;
+    top: -120px;
+    left: -100px;
+}
+
+.circle2 {
+    width: 280px;
+    height: 280px;
+    bottom: -150px;
+    right: -100px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 35px;
+}
+
+.logo {
     color: #2878B5;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.page {
+    color: #718B98;
+    font-size: 15px;
+}
+
+
+/* หัวข้อ */
+
+.title {
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.title h1 {
+    font-size: 43px;
+    color: #2878B5;
+    letter-spacing: 1px;
+}
+
+.title p {
+    color: #536B78;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .line {
-    width: 70px;
+    width: 75px;
     height: 5px;
+
     background: #2878B5;
-    border-radius: 10px;
-    margin: 15px auto 35px;
-}
 
-
-/* กรอบรูป */
-
-.photo-box {
-    width: 300px;
-    height: 220px;
-
-    margin: 0 auto 30px;
-
-    border: 3px dashed #8AC6E5;
     border-radius: 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #718B98;
-    background: #F7FCFF;
+    margin: 18px auto 40px;
 }
 
 
-/* ปุ่ม */
+/* =========================
+   SOP
+========================= */
+
+.sop {
+    position: relative;
+    z-index: 2;
+
+    background: #F7FCFF;
+
+    border: 1px solid #D7EDF6;
+
+    border-radius: 25px;
+
+    padding: 35px 40px;
+
+    box-shadow: 0 8px 20px rgba(74,155,197,0.07);
+}
+
+
+/* หัวข้อย่อย */
+
+.sop-heading {
+    color: #2878B5;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #D7EDF6;
+}
+
+
+/* เนื้อหา */
+
+.sop p {
+    color: #536B78;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    text-align: justify;
+
+    margin-bottom: 18px;
+}
+
+
+/* ประโยคเน้น */
+
+.highlight {
+    color: #2878B5;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.buttons {
+    text-align: center;
+
+    margin-top: 40px;
+
+    position: relative;
+    z-index: 2;
+}
 
 .btn {
     display: inline-block;
+
     padding: 13px 28px;
 
-    background: #2878B5;
+    margin: 5px;
+
+    background: #347A9F;
+
     color: white;
 
     text-decoration: none;
@@ -75,10 +217,88 @@ h1 {
     border-radius: 50px;
 
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .btn:hover {
+    transform: translateY(-3px);
+
     background: #286681;
+}
+
+.next-btn {
+    background: #2878B5;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+
+    margin-top: 32px;
+
+    padding-top: 18px;
+
+    border-top: 1px dashed #C7E8F5;
+
+    color: #347A9F;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #718B98;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 30px 20px;
+
+        border-radius: 25px;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+
+    .sop {
+        padding: 25px 20px;
+    }
+
+    .sop p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
 }
 
 </style>
@@ -90,28 +310,123 @@ h1 {
 
 <div class="container">
 
-    <h1>ACTIVITIES</h1>
+    <!-- วงกลมตกแต่ง -->
 
-    <p>กิจกรรมและประสบการณ์</p>
+    <div class="circle circle1"></div>
 
-    <div class="line"></div>
+    <div class="circle circle2"></div>
 
 
-    <!-- กรอบสำหรับใส่รูป -->
+    <!-- Header -->
 
-    <div class="photo-box">
-        📷 ใส่รูปกิจกรรม
+    <div class="header">
+
+        <div class="logo">
+            ✦ MY PORTFOLIO
+        </div>
+
+        <div class="page">
+            Statement of Purpose ♡
+        </div>
+
     </div>
 
 
-    <a href="portfolio.html" class="btn">
-        ← หน้าที่แล้ว
-    </a>
-    
- <a href="activities2.html" class="btn next-btn">
-        หน้าถัดไป →
- </a>
-    
+    <!-- หัวข้อ -->
+
+    <div class="title">
+
+        <h1>STATEMENT OF PURPOSE</h1>
+
+        <p>เหตุผลและความตั้งใจในการศึกษาต่อ</p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <!-- =========================
+         เนื้อหา SOP
+    ========================= -->
+
+    <div class="sop">
+
+
+        <div class="sop-heading">
+            📝 ความตั้งใจของฉัน
+        </div>
+
+
+        <p>
+            ความสนใจด้านกายภาพบำบัดของฉันเกิดจากความรู้สึกว่า
+            <span class="highlight">
+            การช่วยให้ใครสักคนกลับมาใช้ชีวิตได้ดีขึ้นเป็นสิ่งที่มีความหมาย
+            </span>
+            ฉันจึงมีความตั้งใจที่จะศึกษาต่อในสาขากายภาพบำบัด
+            เพื่อเรียนรู้ทั้งด้านวิทยาศาสตร์ การฟื้นฟูร่างกาย
+            และการดูแลผู้ป่วยอย่างเหมาะสม
+        </p>
+
+
+        <p>
+            ตลอดระยะเวลาที่ผ่านมา ฉันมีความสนใจในวิทยาศาสตร์
+            และการทำความเข้าใจเกี่ยวกับร่างกายมนุษย์
+            การได้เรียนรู้และทำกิจกรรมต่าง ๆ
+            ทำให้ฉันเห็นความสำคัญของการนำความรู้
+            ไปประยุกต์ใช้เพื่อช่วยเหลือผู้อื่น
+        </p>
+
+
+        <p>
+            ฉันเชื่อว่าการเป็นนักกายภาพบำบัดไม่ได้อาศัยเพียง
+            ความรู้ทางวิชาการเท่านั้น แต่ยังต้องมีความใส่ใจ
+            ความอดทน ความรับผิดชอบ และความเข้าใจผู้ป่วย
+            ฉันจึงต้องการพัฒนาตนเองทั้งด้านความรู้
+            ทักษะการปฏิบัติ และการทำงานร่วมกับผู้อื่น
+        </p>
+
+
+        <p>
+            หากได้รับโอกาสในการศึกษาต่อ
+            ฉันตั้งใจที่จะเรียนรู้และพัฒนาตนเองอย่างเต็มที่
+            พร้อมเปิดรับประสบการณ์ใหม่ ๆ
+            เพื่อนำความรู้ที่ได้รับไปใช้ในการดูแลและฟื้นฟูผู้ป่วย
+            ให้สามารถกลับมาใช้ชีวิตประจำวันได้อย่างเหมาะสม
+            และมีคุณภาพชีวิตที่ดีขึ้น
+        </p>
+
+
+        <p>
+            ฉันหวังว่าการศึกษาต่อในสาขากายภาพบำบัด
+            จะเป็นก้าวสำคัญในการพัฒนาตนเอง
+            และนำฉันไปสู่การเป็นบุคลากรทางสุขภาพ
+            ที่สามารถสร้างประโยชน์ให้แก่ผู้อื่นและสังคมในอนาคต
+        </p>
+
+
+    </div>
+
+
+    <!-- =========================
+         ปุ่ม
+    ========================= -->
+
+    <div class="buttons">
+
+        <a href="portfolio.html" class="btn">
+            ← หน้าที่แล้ว
+        </a>
+
+        <a href="activities2.html" class="btn next-btn">
+            กิจกรรม →
+        </a>
+
+    </div>
+
+
+  
+    </div>
+
 </div>
 
 </body>
