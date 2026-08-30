@@ -1,1 +1,602 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Activities | Titaya Kaidklaeng</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tahoma", sans-serif;
+    background: linear-gradient(135deg, #E6F7FF, #F7FCFF);
+    color: #344B56;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   กล่องหลัก
+========================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+
+    background: #FFFFFF;
+
+    border-radius: 35px;
+
+    padding: 40px 55px;
+
+    border: 2px solid #C7E8F5;
+
+    box-shadow: 0 20px 50px rgba(74,155,197,0.15);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   วงกลมตกแต่ง
+========================= */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #EAF9FF;
+    z-index: 0;
+}
+
+.circle1 {
+    width: 250px;
+    height: 250px;
+    top: -120px;
+    left: -100px;
+}
+
+.circle2 {
+    width: 280px;
+    height: 280px;
+    bottom: -150px;
+    right: -100px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 35px;
+}
+
+.logo {
+    color: #2878B5;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.page {
+    color: #718B98;
+    font-size: 15px;
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+.title {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.title h1 {
+    font-size: 48px;
+    color: #2878B5;
+    letter-spacing: 2px;
+}
+
+.title p {
+    color: #536B78;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.line {
+    width: 75px;
+    height: 5px;
+    background: #2878B5;
+    border-radius: 20px;
+    margin: 18px auto 40px;
+}
+
+
+/* =========================
+   กิจกรรม
+========================= */
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   การ์ดกิจกรรม
+========================= */
+
+.activity-card {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    background: #F7FCFF;
+
+    border: 1px solid #D7EDF6;
+
+    border-radius: 24px;
+
+    padding: 13px;
+
+    box-shadow: 0 7px 18px rgba(74,155,197,0.07);
+
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateX(5px);
+
+    box-shadow: 0 12px 25px rgba(74,155,197,0.13);
+}
+
+
+/* =========================
+   รูปกิจกรรม
+========================= */
+
+.activity-image {
+    width: 270px;
+    height: 175px;
+
+    flex-shrink: 0;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    background: #EAF9FF;
+
+    border: 2px solid #C7E8F5;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ช่องที่ยังไม่มีรูป */
+
+.no-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #718B98;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   รายละเอียดกิจกรรม
+========================= */
+
+.activity-content {
+    flex: 1;
+    padding: 8px 15px 8px 0;
+}
+
+.activity-number {
+    color: #6FB6D6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.activity-content h2 {
+    color: #2878B5;
+
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+.activity-content p {
+    color: #536B78;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.buttons {
+    text-align: center;
+
+    margin-top: 38px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    margin: 5px;
+
+    background: #347A9F;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    box-shadow: 0 7px 16px rgba(52,122,159,0.18);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    background: #286681;
+}
+
+.home-btn {
+    background: #2878B5;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+
+    margin-top: 32px;
+
+    padding-top: 18px;
+
+    border-top: 1px dashed #C7E8F5;
+
+    color: #347A9F;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.footer span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #718B98;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   หน้าจอมือถือ
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 30px 20px;
+        border-radius: 25px;
+    }
+
+    .title h1 {
+        font-size: 38px;
+    }
+
+    .activity-card {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+    .activity-image {
+        width: 100%;
+        height: 210px;
+    }
+
+    .activity-content {
+        padding: 5px 10px 15px;
+    }
+
+    .activity-content h2 {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================
+   จบ CSS
+========================= */
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- วงกลมตกแต่ง -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="logo">
+            ✦ MY PORTFOLIO
+        </div>
+
+        <div class="page">
+            Activities ♡
+        </div>
+
+    </div>
+
+
+    <!-- หัวข้อ -->
+
+    <div class="title">
+
+        <h1>ACTIVITIES</h1>
+
+        <p>กิจกรรมและประสบการณ์</p>
+
+        <div class="line"></div>
+
+    </div>
+
+
+    <!-- =========================
+         กิจกรรมที่ 1
+    ========================= -->
+
+    <div class="activities">
+
+
+        <div class="activity-card">
+
+            <div class="activity-image">
+
+                <img src="activity1.jpg" alt="กิจกรรมที่ 1">
+
+            </div>
+
+            <div class="activity-content">
+
+                <div class="activity-number">
+                    ACTIVITY 01
+                </div>
+
+                <h2>
+                    🔬 กิจกรรมทางวิทยาศาสตร์
+                </h2>
+
+                <p>
+                    เข้าร่วมกิจกรรมการเรียนรู้และการทดลอง
+                    ทางวิทยาศาสตร์ ได้ฝึกการคิด วิเคราะห์
+                    การสังเกต และการทำงานอย่างเป็นระบบ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             กิจกรรมที่ 2
+        ========================= -->
+
+        <div class="activity-card">
+
+            <div class="activity-image">
+
+                <img src="activity2.jpg" alt="กิจกรรมที่ 2">
+
+            </div>
+
+            <div class="activity-content">
+
+                <div class="activity-number">
+                    ACTIVITY 02
+                </div>
+
+                <h2>
+                    🤝 กิจกรรมการทำงานร่วมกัน
+                </h2>
+
+                <p>
+                    ได้เรียนรู้การทำงานร่วมกับผู้อื่น
+                    ฝึกการสื่อสาร การแบ่งหน้าที่
+                    ความรับผิดชอบ และการทำงานเป็นทีม
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             กิจกรรมที่ 3
+        ========================= -->
+
+        <div class="activity-card">
+
+            <div class="activity-image">
+
+                <div class="no-image">
+                    📷<br>
+                    ใส่รูปกิจกรรมที่ 3
+                </div>
+
+            </div>
+
+            <div class="activity-content">
+
+                <div class="activity-number">
+                    ACTIVITY 03
+                </div>
+
+                <h2>
+                    📚 กิจกรรมการเรียนรู้
+                </h2>
+
+                <p>
+                    กิจกรรมที่ช่วยเพิ่มพูนความรู้และประสบการณ์
+                    นอกห้องเรียน พร้อมทั้งได้เรียนรู้
+                    จากการลงมือปฏิบัติจริง
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             กิจกรรมที่ 4
+        ========================= -->
+
+        <div class="activity-card">
+
+            <div class="activity-image">
+
+                <div class="no-image">
+                    📷<br>
+                    ใส่รูปกิจกรรมที่ 4
+                </div>
+
+            </div>
+
+            <div class="activity-content">
+
+                <div class="activity-number">
+                    ACTIVITY 04
+                </div>
+
+                <h2>
+                    🌟 กิจกรรมอื่น ๆ
+                </h2>
+
+                <p>
+                    ประสบการณ์ที่ช่วยพัฒนาทักษะ
+                    ความสามารถ ความมั่นใจ
+                    และการเรียนรู้ของฉัน
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         ปุ่ม
+    ========================= -->
+
+    <div class="buttons">
+
+        <a href="portfolio.html" class="btn">
+            ← หน้าที่แล้ว
+        </a>
+
+        <a href="index.html" class="btn home-btn">
+            🏠 หน้าแรก
+        </a>
+
+    </div>
+ 
+
+</div>
+
+</body>
+
+</html>
