@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thank You | Titaya Kaidklaeng</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #E6F7FF,
+        #F7FCFF
+    );
+
+    color: #344B56;
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   กล่องหลัก
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    background: #FFFFFF;
+
+    border-radius: 35px;
+
+    padding: 40px 55px;
+
+    border: 2px solid #C7E8F5;
+
+    box-shadow:
+        0 20px 50px rgba(74,155,197,0.15);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   วงกลมตกแต่ง
+========================= */
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: #EAF9FF;
+
+    z-index: 0;
+}
+
+.circle1 {
+    width: 280px;
+    height: 280px;
+
+    top: -150px;
+    left: -120px;
+}
+
+.circle2 {
+    width: 320px;
+    height: 320px;
+
+    bottom: -180px;
+    right: -140px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.logo {
+    color: #2878B5;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.page {
+    color: #718B98;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   เนื้อหาหลัก
+========================= */
+
+.main {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ไอคอน */
+
+.icon {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #EAF9FF;
+
+    border: 2px solid #C7E8F5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(74,155,197,0.10);
+}
+
+
+/* หัวข้อ */
+
+h1 {
+    color: #2878B5;
+
+    font-size: 58px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #536B78;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* เส้น */
+
+.line {
+    width: 70px;
+
+    height: 5px;
+
+    background: #2878B5;
+
+    border-radius: 20px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   ช่องทางติดต่อ
+========================= */
+
+.contact-box {
+    display: flex;
+
+    gap: 18px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    min-width: 190px;
+
+    padding: 15px 22px;
+
+    background: #F7FCFF;
+
+    border: 1px solid #D7EDF6;
+
+    border-radius: 18px;
+
+    color: #536B78;
+
+    box-shadow:
+        0 7px 18px rgba(74,155,197,0.06);
+}
+
+.contact-item strong {
+    display: block;
+
+    color: #347A9F;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   ข้อความปิดท้าย
+========================= */
+
+.quote {
+    color: #347A9F;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.button-area {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-top: auto;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    margin: 5px;
+
+    background: #347A9F;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    background: #286681;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px dashed #C7E8F5;
+
+    color: #347A9F;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        min-height: 700px;
+
+        padding: 30px 20px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .contact-box {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- วงกลมตกแต่ง -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="logo">
+            ✦ MY PORTFOLIO
+        </div>
+
+        <div class="page">
+            05 / 05
+        </div>
+
+    </div>
+
+
+    <!-- เนื้อหาหลัก -->
+
+    <div class="main">
+
+
+        <h1>
+            THANK YOU
+        </h1>
+
+
+        <p class="subtitle">
+
+            ขอบคุณที่ให้ความสนใจใน<br>
+            Portfolio ของฉัน
+
+        </p>
+
+
+        <div class="line"></div>
+
+
+        <!-- ช่องทางติดต่อ -->
+
+        <div class="contact-box">
+
+
+            <div class="contact-item">
+
+                <strong>📧 Email</strong>
+
+                ใส่อีเมลของคุณ
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📷 Instagram</strong>
+
+                ใส่ Instagram ของคุณ
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>🏫 School</strong>
+
+                โรงเรียนบ้านบึง
+                “อุตสาหกรรมนุเคราะห์”
+
+            </div>
+
+
+        </div>
+
+
+        <div class="quote">
+
+            DREAM • LEARN • GROW
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ปุ่ม -->
+
+    <div class="button-area">
+
+        <a href="activities2.html" class="btn">
+            ← ย้อนกลับ
+        </a>
+
+        <a href="index.html" class="btn">
+            🏠 หน้าแรก
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        TITAYA KAIDKLAENG
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
