@@ -176,49 +176,48 @@ body {
 
 
 /* =========================
-   รูปกิจกรรม
+   รูปกิจกรรม 2 รูป
 ========================= */
 
-.activity-image {
-    width: 270px;
-    height: 175px;
+.activity-images {
+    width: 350px;
+
+    display: flex;
+
+    gap: 10px;
 
     flex-shrink: 0;
+}
+
+
+/* รูปแต่ละใบ */
+
+.activity-images img {
+    width: 50%;
+    height: 175px;
+
+    object-fit: cover;
 
     border-radius: 17px;
-
-    overflow: hidden;
 
     background: #EAF9FF;
 
     border: 2px solid #C7E8F5;
-}
-
-.activity-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
 
     display: block;
 }
 
 
-/* ช่องที่ยังไม่มีรูป */
+/* =========================
+   กรณีมีรูปเดียว
+========================= */
 
-.no-image {
+.activity-images.one-image {
+    width: 270px;
+}
+
+.activity-images.one-image img {
     width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    color: #718B98;
-
-    font-size: 16px;
 }
 
 
@@ -363,6 +362,10 @@ body {
         font-size: 38px;
     }
 
+    .title p {
+        font-size: 16px;
+    }
+
     .activity-card {
         flex-direction: column;
 
@@ -371,9 +374,13 @@ body {
         gap: 15px;
     }
 
-    .activity-image {
+    .activity-images,
+    .activity-images.one-image {
         width: 100%;
-        height: 210px;
+    }
+
+    .activity-images img {
+        height: 190px;
     }
 
     .activity-content {
@@ -441,11 +448,17 @@ body {
     <div class="activities">
 
 
+        <!-- ACTIVITY 01 -->
+
         <div class="activity-card">
 
-            <div class="activity-image">
+            <div class="activity-images">
 
-                <img src="9e8c367d8c3595bb749341493a63df19.jpeg" alt="กิจกรรมที่ 1">
+                <img src="9e8c367d8c3595bb749341493a63df19.jpeg"
+                     alt="เกียรติบัตรกิจกรรม Staff">
+
+                <img src="activity1.jpg"
+                     alt="กิจกรรม Staff ประจำฐานเกม 24">
 
             </div>
 
@@ -456,12 +469,14 @@ body {
                 </div>
 
                 <h2>
-                    
+                    นักเรียนจิตอาสา Staff ประจำฐานเกม 24
                 </h2>
 
                 <p>
-                    เข้าร่วมเป็นStaffประจำฐานเกม24 ในงานมหกรรมวิชาการ ได้ฝึกการสื่อสาร การอธิบายกติกา การแก้ไขปัญหาเฉพาะหน้า และการทำงานร่วมกับผู้อื่น
-    
+                    เข้าร่วมเป็น Staff ประจำฐานเกม 24
+                    ในงานมหกรรมวิชาการ ได้ฝึกการสื่อสาร
+                    การอธิบายกติกา การแก้ไขปัญหาเฉพาะหน้า
+                    และการทำงานร่วมกับผู้อื่น
                 </p>
 
             </div>
@@ -475,9 +490,13 @@ body {
 
         <div class="activity-card">
 
-            <div class="activity-image">
+            <div class="activity-images">
 
-                <img src="activity2.jpg" alt="กิจกรรมที่ 2">
+                <img src="certificate2.jpg"
+                     alt="เกียรติบัตร CU Open House 2026">
+
+                <img src="openhouse-chula.jpg"
+                     alt="เข้าร่วมกิจกรรม CU Open House 2026">
 
             </div>
 
@@ -488,13 +507,15 @@ body {
                 </div>
 
                 <h2>
-                    🤝 กิจกรรมการทำงานร่วมกัน
+                    CU Open House 2026
                 </h2>
 
                 <p>
-                    ได้เรียนรู้การทำงานร่วมกับผู้อื่น
-                    ฝึกการสื่อสาร การแบ่งหน้าที่
-                    ความรับผิดชอบ และการทำงานเป็นทีม
+                    เข้าร่วมกิจกรรม Open House เพื่อศึกษาข้อมูล
+                    เกี่ยวกับการเรียนและหลักสูตรของมหาวิทยาลัย
+                    ได้สัมผัสบรรยากาศภายในมหาวิทยาลัย
+                    และนำประสบการณ์ที่ได้รับมาใช้ประกอบ
+                    การวางแผนศึกษาต่อ
                 </p>
 
             </div>
@@ -508,12 +529,10 @@ body {
 
         <div class="activity-card">
 
-            <div class="activity-image">
+            <div class="activity-images one-image">
 
-                <div class="no-image">
-                    📷<br>
-                    ใส่รูปกิจกรรมที่ 3
-                </div>
+                <img src="student-council.jpg"
+                     alt="กิจกรรมสมัครคณะกรรมการนักเรียน">
 
             </div>
 
@@ -524,13 +543,15 @@ body {
                 </div>
 
                 <h2>
-                    📚 กิจกรรมการเรียนรู้
+                    สมัครคณะกรรมการนักเรียน
                 </h2>
 
                 <p>
-                    กิจกรรมที่ช่วยเพิ่มพูนความรู้และประสบการณ์
-                    นอกห้องเรียน พร้อมทั้งได้เรียนรู้
-                    จากการลงมือปฏิบัติจริง
+                    เข้าร่วมสมัครเป็นคณะกรรมการนักเรียน
+                    เพื่อมีส่วนร่วมในการทำงานของโรงเรียน
+                    ได้ฝึกการทำงานร่วมกับผู้อื่น การสื่อสาร
+                    การรับฟังความคิดเห็น และความรับผิดชอบ
+                    ต่อส่วนรวม
                 </p>
 
             </div>
@@ -544,12 +565,13 @@ body {
 
         <div class="activity-card">
 
-            <div class="activity-image">
+            <div class="activity-images">
 
-                <div class="no-image">
-                    📷<br>
-                    ใส่รูปกิจกรรมที่ 4
-                </div>
+                <img src="morality-certificate.jpg"
+                     alt="เกียรติบัตรค่ายพัฒนาคุณธรรม">
+
+                <img src="morality-camp.jpg"
+                     alt="กิจกรรมค่ายพัฒนาคุณธรรม">
 
             </div>
 
@@ -560,13 +582,14 @@ body {
                 </div>
 
                 <h2>
-                    🌟 กิจกรรมอื่น ๆ
+                    ค่ายพัฒนาคุณธรรมและจริยธรรม
                 </h2>
 
                 <p>
-                    ประสบการณ์ที่ช่วยพัฒนาทักษะ
-                    ความสามารถ ความมั่นใจ
-                    และการเรียนรู้ของฉัน
+                    เข้าร่วมกิจกรรมค่ายพัฒนาคุณธรรมและจริยธรรม
+                    ได้เรียนรู้เรื่องความรับผิดชอบ ความมีระเบียบวินัย
+                    การทำงานร่วมกับผู้อื่น และการอยู่ร่วมกัน
+                    อย่างเคารพและเข้าใจซึ่งกันและกัน
                 </p>
 
             </div>
@@ -588,11 +611,11 @@ body {
         </a>
 
         <a href="contact.html" class="btn home-btn">
-           หน้าถัดไป →
+            หน้าถัดไป →
         </a>
 
     </div>
- 
+
 
 </div>
 
