@@ -24,7 +24,9 @@ body {
 }
 
 
-/* กล่องหลัก */
+/* =========================
+   กล่องหลัก
+========================= */
 
 .container {
     max-width: 1050px;
@@ -45,7 +47,9 @@ body {
 }
 
 
-/* วงกลมตกแต่ง */
+/* =========================
+   วงกลมตกแต่ง
+========================= */
 
 .circle {
     position: absolute;
@@ -69,7 +73,9 @@ body {
 }
 
 
-/* Header */
+/* =========================
+   Header
+========================= */
 
 .header {
     display: flex;
@@ -94,7 +100,9 @@ body {
 }
 
 
-/* หัวข้อ */
+/* =========================
+   หัวข้อ
+========================= */
 
 .title {
     text-align: center;
@@ -185,6 +193,104 @@ body {
     color: #2878B5;
 
     font-weight: bold;
+}
+
+
+/* =========================
+   มหาวิทยาลัย
+========================= */
+
+.universities {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 35px;
+
+    padding: 25px 10px;
+
+    border-top: 2px solid #D7EDF6;
+    border-bottom: 2px solid #D7EDF6;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 20px;
+}
+
+
+/* การ์ดมหาวิทยาลัย */
+
+.university-card {
+    flex: 1;
+
+    max-width: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    background: #F8FCFF;
+
+    border: 1px solid #D7EDF6;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.university-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(74,155,197,0.12);
+}
+
+
+/* โลโก้ */
+
+.university-logo {
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* ข้อความ */
+
+.university-info h3 {
+    color: #2878B5;
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+.university-info p {
+    color: #536B78;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.university-info span {
+    display: block;
+
+    color: #718B98;
+
+    font-size: 12px;
+
+    margin-top: 3px;
 }
 
 
@@ -299,6 +405,20 @@ body {
         line-height: 1.9;
     }
 
+    /* มหาวิทยาลัยบนมือถือ */
+
+    .universities {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px 0;
+    }
+
+    .university-card {
+        max-width: 100%;
+    }
+
 }
 
 </style>
@@ -345,12 +465,9 @@ body {
     </div>
 
 
-    <!-- =========================
-         เนื้อหา SOP
-    ========================= -->
+    <!-- เนื้อหา SOP -->
 
     <div class="sop">
-
 
         <div class="sop-heading">
             📝 ความตั้งใจของฉัน
@@ -358,58 +475,76 @@ body {
 
 
         <p>
-            ความสนใจด้านกายภาพบำบัดของฉันเกิดจากความรู้สึกว่า
-            <span class="highlight">
-            การช่วยให้ใครสักคนกลับมาใช้ชีวิตได้ดีขึ้นเป็นสิ่งที่มีความหมาย
-            </span>
-            ฉันจึงมีความตั้งใจที่จะศึกษาต่อในสาขากายภาพบำบัด
-            เพื่อเรียนรู้ทั้งด้านวิทยาศาสตร์ การฟื้นฟูร่างกาย
-            และการดูแลผู้ป่วยอย่างเหมาะสม
+            ดิฉันเริ่มสนใจด้านกายภาพบำบัด เพราะอยากช่วยให้ผู้คนกลับมาเคลื่อนไหวและใช้ชีวิตประจำวันได้ดีขึ้น 
+            จึงอยากเรียนรู้เกี่ยวกับร่างกายมนุษย์ การฟื้นฟู และการดูแลผู้ป่วย 
+            เพื่อนำความรู้ไปพัฒนาตนเองและต่อยอดสู่การเป็นนักกายภาพบำบัดในอนาคต
         </p>
-
-
-        <p>
-            ตลอดระยะเวลาที่ผ่านมา ฉันมีความสนใจในวิทยาศาสตร์
-            และการทำความเข้าใจเกี่ยวกับร่างกายมนุษย์
-            การได้เรียนรู้และทำกิจกรรมต่าง ๆ
-            ทำให้ฉันเห็นความสำคัญของการนำความรู้
-            ไปประยุกต์ใช้เพื่อช่วยเหลือผู้อื่น
-        </p>
-
-
-        <p>
-            ฉันเชื่อว่าการเป็นนักกายภาพบำบัดไม่ได้อาศัยเพียง
-            ความรู้ทางวิชาการเท่านั้น แต่ยังต้องมีความใส่ใจ
-            ความอดทน ความรับผิดชอบ และความเข้าใจผู้ป่วย
-            ฉันจึงต้องการพัฒนาตนเองทั้งด้านความรู้
-            ทักษะการปฏิบัติ และการทำงานร่วมกับผู้อื่น
-        </p>
-
-
-        <p>
-            หากได้รับโอกาสในการศึกษาต่อ
-            ฉันตั้งใจที่จะเรียนรู้และพัฒนาตนเองอย่างเต็มที่
-            พร้อมเปิดรับประสบการณ์ใหม่ ๆ
-            เพื่อนำความรู้ที่ได้รับไปใช้ในการดูแลและฟื้นฟูผู้ป่วย
-            ให้สามารถกลับมาใช้ชีวิตประจำวันได้อย่างเหมาะสม
-            และมีคุณภาพชีวิตที่ดีขึ้น
-        </p>
-
-
-        <p>
-            ฉันหวังว่าการศึกษาต่อในสาขากายภาพบำบัด
-            จะเป็นก้าวสำคัญในการพัฒนาตนเอง
-            และนำฉันไปสู่การเป็นบุคลากรทางสุขภาพ
-            ที่สามารถสร้างประโยชน์ให้แก่ผู้อื่นและสังคมในอนาคต
-        </p>
-
-
     </div>
 
 
     <!-- =========================
-         ปุ่ม
+         มหาวิทยาลัยที่สนใจ
     ========================= -->
+
+    <div class="universities">
+
+        <!-- จุฬาลงกรณ์มหาวิทยาลัย -->
+
+        <div class="university-card">
+
+            <img
+                class="university-logo"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Chulalongkorn_University.svg"
+                alt="Chulalongkorn University Logo"
+            >
+
+            <div class="university-info">
+
+                <h3>คณะสหเวชศาสตร์ สาขากายภาพบำบัด</h3>
+
+                <p>
+                    จุฬาลงกรณ์มหาวิทยาลัย
+                </p>
+
+                <span>
+                    Chulalongkorn University
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- มหาวิทยาลัยธรรมศาสตร์ -->
+
+        <div class="university-card">
+
+            <img
+                class="university-logo"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_Thammasat_University.svg"
+                alt="Thammasat University Logo"
+            >
+
+            <div class="university-info">
+
+                <h3>คณะสหเวชศาสตร์ สาขากายภาพบำบัด</h3>
+
+                <p>
+                    มหาวิทยาลัยธรรมศาสตร์
+                </p>
+
+                <span>
+                    Thammasat University
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ปุ่ม -->
 
     <div class="buttons">
 
@@ -423,9 +558,6 @@ body {
 
     </div>
 
-
-  
-    </div>
 
 </div>
 
